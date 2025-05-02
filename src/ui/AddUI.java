@@ -13,6 +13,8 @@ public class AddUI extends BaseUI {
 		String content = scanStr("내용을 입력하세요 : ");
 		// BaseUI의 입력기능을 상속받았으니 scanStr 사용해서 contents변수에 넣기
 		
+		
+		
 		Thread.sleep(1000);
 		// 새글 등록을 마치고 메뉴가 너무 빨리 뜬다 -> 조금 텀을 주자
 		
