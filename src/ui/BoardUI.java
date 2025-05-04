@@ -17,9 +17,9 @@ public class BoardUI extends BaseUI {
 	 */
 
 	private String menu() {
-		System.out.println("-----------------------------------");
-		System.out.println("\t<< 게시판 관리 프로그램 >>");
-		System.out.println("-----------------------------------");
+		System.out.println("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
+		System.out.println("               ᙙᙖ 알바천국 게시판 ᙙᙖ               ");
+		System.out.println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
 		System.out.println("\t1. 전체게시글 조회");
 		System.out.println("\t2. 글번호 조회");
 		System.out.println("\t3. 게시글 등록");
@@ -65,10 +65,11 @@ public class BoardUI extends BaseUI {
 			switch (choice) {
 			// 객체를 불러와서 execute 할건데 인터페이스 상속받은 BaseUI를 모든 객체가 상속받네
 			case "1":
+				ui = new SeachAllUI();
 				//System.out.println("전체게시글 조회 선택");
 				break;
 			case "2":
-				
+				ui = new SearchOneUI();
 				//System.out.println("글번호 조회 선택");
 				break;
 			case "3":
@@ -77,7 +78,6 @@ public class BoardUI extends BaseUI {
 				//AddUI 클래스 호출해 객체를 생성한다 (새글 등록하기 기능)
 				//add.execute();
 				//AddUI에서 재정의한 execute를 호출한다
-				ui.execute();
 				break;
 			case "4":
 				ui = new UpdateUI();
@@ -85,10 +85,11 @@ public class BoardUI extends BaseUI {
 				//System.out.println("게시글 수정 선택");
 				//UpdateUI update = new UpdateUI();
 				//AddUI 클래스 호출해 객체를 생성한다 (글 수정하기 기능)
-				ui.execute();
+				//ui.execute();
 				//Update 에서 재정의한 execute를 호출한다
 				break;
 			case "5":
+				ui = new DeleteUI();
 				//System.out.println("게시글 삭제 선택");
 				break;
 			case "0":
@@ -97,7 +98,6 @@ public class BoardUI extends BaseUI {
 				//ExitUI 클래스 호출해 객체를 생성한다 (종료하기 기능)
 				//exit.execute();
 				// ExitUI에서 재정의한 execute를 호출한다
-				ui.execute();
 				
 				/**
 				 여기 해당하는 값에 명령어를 처리해야 하는데 너무 길다
