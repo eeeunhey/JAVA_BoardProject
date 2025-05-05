@@ -110,13 +110,4 @@ public class BoardVO {
 				+ regDate + "]";
 	}
 	
-	
-
-	
-
-	
-	
-	
-	
-
 }

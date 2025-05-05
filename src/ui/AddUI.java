@@ -1,7 +1,7 @@
 package ui;
 
-import boardDAO.BoardDAO;
 import boardVO.BoardVO;
+import dao.BoardDAO;
 
 public class AddUI extends BaseUI {
 	// 새글을 추가하는 UI
